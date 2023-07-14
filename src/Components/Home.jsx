@@ -17,7 +17,7 @@ function CenteredSiteName() {
       justifyContent="center"
     >
       <Flex
-        bg="rgba(0, 0, 0, 0.6)" 
+        bg="rgba(0, 0, 0, 0.91)" 
         borderRadius="md"
         padding={4}
         justifyContent="center"
