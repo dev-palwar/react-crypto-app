@@ -12,7 +12,7 @@ function Nav() {
       justify="space-between"
       wrap="wrap"
       padding={4}
-      bg="#7a5003"
+      bg="#1a202c"
       color="white"
       className='nav'
     >

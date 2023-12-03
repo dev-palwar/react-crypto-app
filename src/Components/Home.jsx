@@ -1,39 +1,44 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
-import useTypewriter from 'react-typewriter-hook';
+import { Box, Image, Text } from "@chakra-ui/react";
+import React from "react";
+import btcSrc from "../Assets/btc.png";
+import { motion } from "framer-motion";
 
-function CenteredSiteName() {
-  const text = 'DCrypto';
-  const typedText = useTypewriter(text);
-
+const Home = () => {
   return (
-    <Box
-      backgroundImage="url('https://images.unsplash.com/photo-1631603090989-93f9ef6f9d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80')"
-      backgroundSize="cover"
-      filter="hue-rotate(360deg)"
-      backgroundPosition="center"
-      height="100vh"
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-    >
-      <Flex
-        bg="rgba(0, 0, 0, 0.91)" 
-        borderRadius="md"
-        padding={4}
-        justifyContent="center"
-        alignItems="center"
+    <Box w={"full"} h={"100vh"}>
+      <motion.div
+        style={{
+          height: "80vh",
+        }}
+        animate={{
+          translateY: "20px",
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          repeatType: "reverse",
+        }}
       >
-        <Text
-          color="white"
-          fontSize="80"
-          fontWeight="bold"
-          textAlign="center"
-        >
-          {typedText}
-        </Text>
-      </Flex>
+        <Image
+          w={"full"}
+          h={"full"}
+          objectFit={"contain"}
+          src={btcSrc}
+          filter={"grayscale(1)"}
+        />
+      </motion.div>
+
+      <Text
+        fontSize={"6xl"}
+        textAlign={"center"}
+        fontWeight={"thin"}
+        color={"whiteAlpha.700"}
+        mt={"-20"}
+      >
+        Dcrypto
+      </Text>
     </Box>
   );
-}
+};
 
-export default CenteredSiteName;
+export default Home;
